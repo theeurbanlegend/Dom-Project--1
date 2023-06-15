@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*,html{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Roboto',sans-serif;
+}
+body{
+    background-image: url(background-2.jpg);
+    height:100vh;
+    background-size:cover;
+    position:relative;
+    
+}
+#start-btn{
+    position:absolute;
+    top:70%;
+    left:10%;
+    width:350px;
+    height:80px;
+    font-size:2rem;
+    background:transparent;
+    color:#fff;
+    border:solid 2px white;
+    border-radius:10px;
+    padding:5px;
+    box-shadow:0 0 3px black;
+
+}
+#start-btn:hover{
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    background-color:whitesmoke;
+    color:black;
+}
+  
+
+#modal{
+    background-color:white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    height:100px;
+    width:200px;
+    padding:10px 20px;
+    border-radius: 5px;
+    transform:translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation-name:drop-down;
+    animation-timing-function:ease-in-out;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+}
+#close-btn{
+    color:red;
+   font-size: 3rem;
+   cursor:pointer;
+}
+#modal-container{
+    display: none;
+    background-color:rgba(0, 0, 0,0.2);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+@keyframes drop-down{
+    from{top:-15000px}
+    to{
+        transform: translateX(50%);
+    }
+}
